@@ -24,4 +24,8 @@ public class Medico extends Funcionario{
     public void setEspecialidade(String especialidade) {
         this.especialidade = especialidade;
     }
+    public double gerarBonus(){
+        double bonus=calcularSalario()*0.10;
+        return bonus;
+    }
 }
