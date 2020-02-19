@@ -40,8 +40,10 @@ public class Hospital {
     public void setEndereco(String endereco) {
         this.endereco = endereco;
     }
-    public void Hospital(String end, int id){
-        System.out.println("identificaçao do hospital: "+id+" endereço: "+end);
+    public void Hospital(String end, int id, String nome){
+        this.endereco = end;
+        this.nome= nome;
+        this.idHospital = id;
     }
     public void listarMedicos(){
          for (Funcionario f: funcionarios){

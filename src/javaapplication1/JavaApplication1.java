@@ -42,7 +42,9 @@ public class JavaApplication1 {
         e1.setCoren("djlhgfkçsdghfdljkgjgvbjdfjkvbhflçihvhjsfjlhvjsfcbnfd~çobvjhfubfdshjvbdsj");
         e1.setMatricula(523345345);
         e1.setSenha("sdfasfsdf");
+      
         
+        System.out.println("salario com desconto"+ e1.calcularSalario(10));
         System.out.println("nome do enfermeiro "+e1.getNome());
         System.out.println("cpf do enfermeiro "+e1.getCpf());
         System.out.println("rg do enfermeiro "+e1.getRg());
@@ -61,6 +63,7 @@ public class JavaApplication1 {
         m1.setCrm("32142345");
         m1.setEspecialidade("oftalmoligista");
        
+        System.out.println("salario com desconto: "+m1.calcularSalario(10));
         System.out.println("nome do medico "+m1.getNome());
         System.out.println("cpf do medico "+m1.getCpf());
         System.out.println("rg do medico "+m1.getRg());
@@ -69,7 +72,26 @@ public class JavaApplication1 {
         System.out.println("senha do medico "+m1.getSenha());
         System.out.println("crm do medico "+m1.getCrm());
         System.out.println("especialidade do medico "+m1.getEspecialidade());
+        System.out.println("bonus de salario "+m1.gerarBonus());
         
+        Hospital h1 = new Hospital();
+        
+        h1.Hospital("santa casa da rosinha", 12314, "atras do outro hospital");
+        h1.listarTodosFuncionarios();
+        h1.listarMedicos();
+        h1.listarEnfeirmeiros();
+        
+        System.out.println("nome do hospital "+h1.getNome());
+        System.out.println("endereco"+ h1.getEndereco());
+        System.out.println("identificaçao "+h1.getIdHospital());
+        
+        ProntoSocorro ps1 = new ProntoSocorro();
+        
+        ps1.ProntoSocorro(123123, h1, "sla onde");
+        
+        System.out.println("identidicaçao "+ps1.getIdFilial());
+        System.out.println("matriz "+ps1.getMatriz());
+        System.out.println("endereço " + ps1.getEndereco());
         
         
         

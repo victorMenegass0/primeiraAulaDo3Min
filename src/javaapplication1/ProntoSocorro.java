@@ -29,8 +29,11 @@ public class ProntoSocorro {
     public void setEndereco(String endereco) {
         this.endereco = endereco;
     }
-    public void ProntoSocorro(int id, Hospital matriz){
-        System.out.println("identidicaçao da filial: "+id+" Hospital: "+matriz);
+    public void ProntoSocorro(int id, Hospital matriz, String end){
+        this.endereco = end;
+        this.idFilial = id;
+        this.matriz = matriz;
+        
     }
     
 }
