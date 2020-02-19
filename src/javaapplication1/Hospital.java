@@ -50,6 +50,13 @@ public class Hospital {
             }
         }
     }
+    public void listarEnfeirmeiros(){
+         for (Funcionario f: funcionarios){
+            if(f instanceof Enfermeiro){
+                System.out.println("nome: "+f.getNome());
+            }
+        }
+    }
    
    
    

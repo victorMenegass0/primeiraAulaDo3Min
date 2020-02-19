@@ -27,6 +27,8 @@ public class Funcionario extends Pessoa{
         return (valorHora*72)-descontos;
     }
     public double gerarBonus(){
-        return 1;
+    return 1;
     }
+
+    
 }
