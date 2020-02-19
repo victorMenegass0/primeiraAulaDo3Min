@@ -16,4 +16,8 @@ public class Enfermeiro extends Funcionario{
         this.coren = coren;
     }
     
+    public double gerarBonus(){
+        double bonus=calcularSalario()*0.10;
+        return bonus;
+    }
 }
