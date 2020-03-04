@@ -30,5 +30,26 @@ foreign key(id_hospital) references tb_hospital(id_hospital),
 vl_hora decimal(5, 2)not null
 );
 
-create table tb_medico
+create table tb_medico(
+cd_medico int(6)auto_increment primary key not null,
+nr_crm varchar(50)not null,
+ds_especialidade varchar(50)not null,
+id_funcionario int(6)not null,
+foreign key(id_funcionario)references tb_funcionarios(id_funcionario)
+);
+
+create table tb_enfermeiro(
+cd_enfermeiro int(6)auto_increment primary key not null,
+nr_coren varchar(45)not null,
+id_funcionario int(6)not null,
+foreign key(id_funcionario)references tb_funcionarios(id_funcionario)
+);
+
+create table tb_ps(
+cd_prontoS int(6)primary key auto_increment not null,
+ds_endereco varchar(100)not null,
+id_hospital int not null,
+foreign key(id_hospital) references tb_hospital(id_hospital)
+)
+
 
