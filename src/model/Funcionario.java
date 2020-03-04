@@ -1,5 +1,5 @@
 
-package javaapplication1;
+package model;
 
 public class Funcionario extends Pessoa{
     private int matricula;

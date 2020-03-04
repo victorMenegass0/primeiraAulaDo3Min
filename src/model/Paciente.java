@@ -1,5 +1,5 @@
 
-package javaapplication1;
+package model;
 
 public class Paciente extends Pessoa{
    private int codPaciente;
