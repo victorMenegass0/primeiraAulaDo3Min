@@ -59,6 +59,9 @@ public class Hospital {
             }
         }
     }
+    public Hospital(String nome){
+        this.nome = nome;
+    }
    
    
    
