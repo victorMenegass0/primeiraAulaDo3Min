@@ -74,9 +74,8 @@ public class JavaApplication1 {
         System.out.println("especialidade do medico "+m1.getEspecialidade());
         System.out.println("bonus de salario "+m1.gerarBonus());
         
-        Hospital h1 = new Hospital();
+        Hospital h1 = new Hospital("santa casa da rosinha");
         
-        h1.Hospital("santa casa da rosinha", 12314, "atras do outro hospital");
         h1.listarTodosFuncionarios();
         h1.listarMedicos();
         h1.listarEnfeirmeiros();

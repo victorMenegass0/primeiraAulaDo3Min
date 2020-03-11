@@ -40,11 +40,6 @@ public class Hospital {
     public void setEndereco(String endereco) {
         this.endereco = endereco;
     }
-    public void Hospital(String end, int id, String nome){
-        this.endereco = end;
-        this.nome= nome;
-        this.idHospital = id;
-    }
     public void listarMedicos(){
          for (Funcionario f: funcionarios){
             if(f instanceof Medico){
@@ -61,6 +56,11 @@ public class Hospital {
     }
     public Hospital(String nome){
         this.nome = nome;
+    }
+    
+    @Override
+    public String toString(){
+        return this.getNome();
     }
    
    

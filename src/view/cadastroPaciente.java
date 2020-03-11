@@ -5,6 +5,11 @@
  */
 package view;
 
+import controller.controllerHospital;
+import javax.swing.JOptionPane;
+import model.Hospital;
+
+
 /**
  *
  * @author Aluno02
@@ -17,7 +22,14 @@ public class cadastroPaciente extends javax.swing.JPanel {
     public cadastroPaciente() {
         initComponents();
     }
-
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {                                  
+        controllerHospital ch = new controllerHospital();
+        cmbBox.removeAllItems();
+             
+        for(Hospital h: ch.listarHospital()){
+            cmbBox.addItem(h);
+        }
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -39,7 +51,7 @@ public class cadastroPaciente extends javax.swing.JPanel {
         jPasswordField1 = new javax.swing.JPasswordField();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox();
+        cmbBox = new javax.swing.JComboBox();
         jButton1 = new javax.swing.JButton();
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -87,9 +99,19 @@ public class cadastroPaciente extends javax.swing.JPanel {
 
         jLabel7.setText("Hospital");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmbBoxActionPerformed(evt);
+            }
+        });
 
         jButton1.setText("Cadastrar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -120,7 +142,7 @@ public class cadastroPaciente extends javax.swing.JPanel {
                                         .addComponent(jLabel4)
                                         .addComponent(jPasswordField1)
                                         .addComponent(jLabel6)))
-                                .addComponent(jComboBox1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 347, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(cmbBox, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 347, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addGap(26, 26, 26))
             .addGroup(layout.createSequentialGroup()
                 .addGap(146, 146, 146)
@@ -155,7 +177,7 @@ public class cadastroPaciente extends javax.swing.JPanel {
                 .addGap(40, 40, 40)
                 .addComponent(jLabel7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(cmbBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
                 .addComponent(jButton1)
                 .addGap(23, 23, 23))
@@ -182,10 +204,21 @@ public class cadastroPaciente extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_jPasswordField1ActionPerformed
 
+    private void cmbBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cmbBoxActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        //teste para ver se o combo box do hospital ta funcionando
+//        Hospital h = (Hospital)cmbBox.getSelectedItem();
+//        JOptionPane.showMessageDialog(rootPane, h.getIdHospital());
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox cmbBox;
     private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

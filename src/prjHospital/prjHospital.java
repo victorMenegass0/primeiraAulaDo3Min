@@ -3,6 +3,8 @@ package prjHospital;
 import java.sql.Connection;
 import javax.swing.JOptionPane;
 import model.ConnectionFactory1;
+import view.cadastrarHospital;
+import view.cadastroPaciente;
 
 public class prjHospital {
     public static void main(String[] args) {
@@ -14,6 +16,13 @@ public class prjHospital {
         catch (Exception e){
             JOptionPane.showConfirmDialog(null, e);
         }
+        
+        cadastrarHospital cadh = new cadastrarHospital();
+        cadh.setVisible(true);
+        
+        cadastroPaciente cp = new cadastroPaciente();
+        cp.setVisible(true);
+        
     }
     
 }
