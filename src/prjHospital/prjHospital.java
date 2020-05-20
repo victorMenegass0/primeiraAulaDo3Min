@@ -5,6 +5,7 @@ import javax.swing.JOptionPane;
 import model.ConnectionFactory1;
 import view.cadastrarHospital;
 import view.cadastroPaciente;
+import view.cadastraProntoSocorro;
 
 public class prjHospital {
     public static void main(String[] args) {
@@ -22,6 +23,9 @@ public class prjHospital {
         
         cadastroPaciente cp = new cadastroPaciente();
         cp.setVisible(true);
+        
+        cadastraProntoSocorro ps = new cadastraProntoSocorro();
+        ps.setVisible(true);
         
     }
     
